@@ -10,3 +10,27 @@ class InvalidCharacterException {}; // Handles a case where start is not an alph
 class InvalidRangeException {}; // Handles a case where the offset arguement goes beyond the alphabet
 class CaseConversionException {}; // Handles a case where there is a upper and lower case transition 
 
+char character(char start, int offset)
+{
+	char result = start + offset;
+	try
+	{
+		if (!isalpha(start))
+		{
+			throw InvalidCharacterException();
+		}
+		else if (!isalpha(start + offset))
+		{
+			throw InvalidRangeException();
+		}
+		else if (islower(result) && isupper(start))
+		{
+			throw CaseConversionException();
+		}
+		else if (islower(start) && isupper(result))
+		{
+			throw CaseConversionException();
+		}
+	}
+	
+}
