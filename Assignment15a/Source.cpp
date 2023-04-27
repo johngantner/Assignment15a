@@ -44,4 +44,14 @@ char character(char start, int offset)
 	{
 		cout << "Error: Case Conversion Exception" << endl;
 	}
+	return result;
+}
+
+int main() { // Calling the character function
+	cout << character('a', 1) << endl;
+	cout << character('a', -1) << endl;
+	cout << character('Z', -1) << endl;
+	cout << character('?', 5) << endl;
+	cout << character('A', 32) << endl;
+
 }
