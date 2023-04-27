@@ -10,6 +10,7 @@ class InvalidCharacterException {}; // Handles a case where start is not an alph
 class InvalidRangeException {}; // Handles a case where the offset arguement goes beyond the alphabet
 class CaseConversionException {}; // Handles a case where there is a upper and lower case transition 
 
+// Character function
 char character(char start, int offset)
 {
 	char result = start + offset;
@@ -32,6 +33,8 @@ char character(char start, int offset)
 			throw CaseConversionException();
 		}
 	}
+
+	// Error messages
 	catch (const InvalidCharacterException ex)
 	{
 		cout << "Error: Invalid Character Exception" << endl;
