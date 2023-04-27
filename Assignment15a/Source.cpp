@@ -32,5 +32,16 @@ char character(char start, int offset)
 			throw CaseConversionException();
 		}
 	}
-	
+	catch (const InvalidCharacterException ex)
+	{
+		cout << "Error: Invalid Character Exception" << endl;
+	}
+	catch (const InvalidRangeException ex)
+	{
+		cout << "Error: Invalid Range Exception" << endl;
+	}
+	catch (const CaseConversionException ex)
+	{
+		cout << "Error: Case Conversion Exception" << endl;
+	}
 }
