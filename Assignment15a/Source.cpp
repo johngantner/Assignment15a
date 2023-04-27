@@ -35,14 +35,17 @@ char character(char start, int offset)
 	catch (const InvalidCharacterException ex)
 	{
 		cout << "Error: Invalid Character Exception" << endl;
+		return ' ';
 	}
 	catch (const InvalidRangeException ex)
 	{
 		cout << "Error: Invalid Range Exception" << endl;
+		return ' ';
 	}
 	catch (const CaseConversionException ex)
 	{
 		cout << "Error: Case Conversion Exception" << endl;
+		return ' ';
 	}
 	return result;
 }
